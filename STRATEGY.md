@@ -25,7 +25,7 @@ Each theory = a distinct audience + a distinct messaging angle + a distinct visu
 
 ### Theory B — "Matcha aesthete" (T-B)
 
-- **Who**: 22–35, specialty-tea curious, follows @ippodotea, @breakawaymatcha, @adagio. Knows the difference between ceremonial and culinary. Owns a chasen.
+- **Who**: 22–35, specialty-tea curious, follows @ippodotea, @breakawaymatcha, @adagio. Knows first-pick from culinary. Owns a chasen.
 - **Pain**: matcha sweets are usually too sweet, too bitter, or made with bad matcha. Most "matcha-flavored" things are dyed white chocolate.
 - **Angle**: matcha quality, sourcing, terroir. Uji, first-pick, stone-ground, tender. Show the matcha, not the sweetness.
 - **Visual code**: bamboo whisk, mortar, dark wood, single shaft of light. Vertical compositions. Japanese-influenced typography (sparse, generous whitespace).
