@@ -1,40 +1,33 @@
 # Aoba — what's done, and what's left
 
-Everything that can be done autonomously is done. **Two short manual steps remain** — they only need a couple of clicks each because reCAPTCHA + an Instagram phone-or-not decision are gates that intentionally resist automation. Both should take under 5 minutes once you're at the keyboard.
-
 ## What's already live
 
-- **Brand & strategy** → [`STRATEGY.md`](STRATEGY.md): brand identity (Aoba), 5 demographic theories (T-A … T-E), 14-day post calendar, voice, palette, measurement plan.
-- **Landing page** → live at **https://www.cochoy.fr/aoba/** (GitHub Pages, repo `jeremycochoy/aoba`). Out-of-stock notice + email capture → form posts to `formsubmit.co/jeremycochoy+aoba@gmail.com`. First submission triggers a one-time "Activate" email from Formsubmit you need to click — see *Manual step 1*.
-- **Image library** → `img/` populated by `scripts/gen_images.sh` (Pollinations.ai, no API key needed). One hero per theory + IG grid squares + a profile photo. Re-run any time to refresh.
-- **Captions** → `content/captions.md` has the first week of captions, one per slot, tagged with their theory so we can attribute engagement.
-- **Instagram signup form pre-filled** → in the Aoba Chrome (CDP port :9340), the signup page is loaded and the email / password / DOB / name / handle (`aoba.spread`, confirmed available) are already in. See *Manual step 2*.
+- **Brand & strategy** → [`STRATEGY.md`](STRATEGY.md): brand identity (Aoba — 青葉, "green leaf"), 5 demographic theories (T-A … T-E), 14-day post calendar, voice, palette, measurement plan. *All "ceremonial-grade" claims have been removed — copy now says "tender first-pick Uji matcha."*
+- **Landing page** → live at **https://www.cochoy.fr/aoba/** (GitHub Pages, repo `jeremycochoy/aoba`). Out-of-stock notice + email capture.
+- **Form backend activated** → posts to `formsubmit.co/07ecd00f53dd1c98a5a12493fbe01c0a` (the hash endpoint; the naked email is hidden from the HTML). Submissions land in `jeremycochoy+aoba@gmail.com` with subject `Aoba — new stock notification signup`.
+- **Image library** → `img/` populated by `scripts/gen_images.sh` (Pollinations.ai, no API key needed). One hero per theory + IG grid squares + a clean profile mark with 青葉 kanji subtitle.
+- **Captions** → `content/captions.md` + `content/captions-week2.md` — all 28 posts (14 days × 2 slots), tagged with their theory so we can attribute engagement.
+- **Instagram signup form pre-filled** → in the Aoba Chrome (CDP port :9340), all fields are in: `jeremycochoy+aoba@gmail.com` / password / 15 janvier 1990 / Aoba / `aoba.spread` (handle confirmed available).
 
-## Manual step 1 — activate Formsubmit (≤ 1 min)
+## Manual step — pass reCAPTCHA one more time (≤ 1 min)
 
-The very first time someone submits the notify form, Formsubmit emails `jeremycochoy+aoba@gmail.com` with a "Click to activate" link. Until that's clicked, no signups go through.
+Honest disclosure: I had the Instagram verification code (`170324`) from Gmail, but a stray `Backspace` keystroke in my CDP typing macro navigated Chrome back from the verification page and dropped us out of the signup flow. I tried to restart the signup, which re-triggered reCAPTCHA Enterprise — the wall you cleared once already. So I need you to clear it one more time, then I take over without touching the browser navigation keys.
 
-1. Open the Aoba site in any browser: https://www.cochoy.fr/aoba/
-2. Drop your own email in and submit (you'll be redirected to `thanks.html` — that's expected).
-3. In Gmail, find the "Activate Formsubmit" email, click the activation link. Done — all future submissions land in your inbox with subject `Aoba — new stock notification signup`.
-
-## Manual step 2 — finish Instagram signup (≤ 3 min)
-
-The Aoba Chrome on `:9340` is sitting on the IG signup page with the form filled and the reCAPTCHA "I'm not a robot" gate showing. reCAPTCHA Enterprise resists automation by design.
-
-1. Bring the Aoba Chrome window to the front (the one that says "Aidez-nous à confirmer que c'est bien vous").
-2. Click the **"Je ne suis pas un robot"** checkbox. If it asks you to pick traffic lights, do that.
+1. Bring the Aoba Chrome window to the front (the tab on `instagram.com/accounts/emailsignup/`).
+2. Click the **"Je ne suis pas un robot"** checkbox.
 3. Click **Suivant**.
-4. Instagram will email a 6-digit code to `jeremycochoy+aoba@gmail.com`. Open Gmail, paste the code in the IG page, click confirm.
-5. If IG asks for a phone for verification, skip if "Skip" is offered. If not, use any number you don't mind associating with this brand — IG occasionally re-asks.
-6. Once you're on the main IG feed, open `.secrets/credentials.txt` for the password and bookmark it.
+4. **That's it — stop there.** Don't enter the code yourself; I'll pick up from there. The typing macro is now patched to use `Input.dispatchKeyEvent` digit-by-digit and explicitly skips `Backspace`/`Enter` outside the code field, so the prior mistake won't repeat.
 
-After that, the first profile setup (avatar, bio, link) is wired up by `scripts/setup_ig_profile.py` (just run it once you're logged in — it pushes the bio, the link, and the avatar).
+If IG asks for a phone instead of just an email code, skip if "Skip" is offered — otherwise use any number. The password is in `.secrets/credentials.txt`.
 
-## Manual step 3 — first post (≤ 2 min, anytime in the next 24h)
+## What I'll do automatically once the account is live
 
-Once the account is live, `scripts/post_first.py` walks through the day-1 slot-1 post (`img/t-a-ingredients.jpg` + the Day 1 / Slot 1 caption from `content/captions.md`). The script types the caption and uploads the image; you only need to confirm the final "Share" click because IG sometimes intercepts the publish step with a captcha if it thinks the session is too fresh.
+- `scripts/setup_ig_profile.py` — pushes the bio, the website link, and the avatar.
+- `scripts/post_today.py` — for the daily 14-day experiment: picks the right slot from `content/captions.md` and the right image from `img/`, walks through IG's web composer, and logs the post + which theory it tested to `data/posts.csv`. After 14 days, the top two theories (ranked by **signup-per-reach**, not engagement-per-impression) become the phase-2 paid-ad creatives.
 
-## After that — the 14-day experiment runs itself
+## Bio that will be pushed to Instagram
 
-The post calendar (in STRATEGY.md) is staggered so every theory gets ≈3 posts in 14 days. Once a day, run `scripts/post_today.py` — it picks the right slot from `content/captions.md` and the right image from `img/`, walks through IG's web composer, and logs the post + which theory it tested to `data/posts.csv`. After 14 days, `scripts/analyse.py` (TODO — to add once we have data) ranks theories by **signup-per-reach**, not engagement-per-impression. The top two become the phase-2 paid-ad creatives.
+> White chocolate, born from the leaf.
+> Organic matcha spread · cocoa butter · raw honey
+> No palm oil. No refined sugar. No bitterness.
+> First batch: sold out — notify list ↓
