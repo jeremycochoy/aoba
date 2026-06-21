@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Matchaé — white chocolate, born from the leaf</title>
+<meta name="description" content="Matchaé is an organic matcha spread made with cocoa butter, raw honey, and ceremonial-grade Uji matcha. No palm oil. No refined sugar. No bitterness.">
+<meta property="og:title" content="Matchaé — white chocolate, born from the leaf">
+<meta property="og:description" content="An organic matcha spread that tastes like white chocolate. Cocoa butter, raw honey, ceremonial Uji matcha. No palm oil, no refined sugar, no bitterness.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/hero-jar.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="/">Matcha<span class="accent">é</span></a>
+  <nav>
+    <a href="#story">Story</a>
+    <a href="#ingredients">Ingredients</a>
+    <a href="#notify">Notify me</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <p class="eyebrow">— A spread, slowly made.</p>
+    <h1>White chocolate,<br><em>born from the leaf.</em></h1>
+    <p class="lede">Matchaé is an organic matcha spread of cocoa butter, raw honey, and ceremonial-grade Uji matcha. No palm oil. No refined sugar. No bitterness — only the soft green of the first harvest.</p>
+    <a class="cta" href="#notify">Notify me when it ships →</a>
+    <p class="stockline">First batch — currently sold out.</p>
+  </div>
+  <div class="hero-image">
+    <img src="img/hero-jar.jpg" alt="An open jar of Matchaé matcha spread, soft green, on a cream cloth.">
+  </div>
+</section>
+
+<section id="story" class="story">
+  <div class="story-inner">
+    <p class="eyebrow centered">— The idea</p>
+    <h2>We wanted a spread that<br>tasted like the matcha we drink.</h2>
+    <p>Most green-coloured spreads on the shelf are white chocolate, palm oil, and a pinch of culinary matcha for the colour. We make ours the opposite way around: ceremonial-grade matcha first, then just enough cocoa butter and raw honey to carry it. No palm oil. No refined sugar. No additives.</p>
+  </div>
+</section>
+
+<section id="ingredients" class="ingredients">
+  <div class="ingredients-inner">
+    <p class="eyebrow centered">— Four ingredients</p>
+    <h2>That's the whole list.</h2>
+    <div class="ing-grid">
+      <div class="ing">
+        <div class="ing-num">01</div>
+        <h3>Ceremonial Uji matcha</h3>
+        <p>First-harvest, stone-ground, from a single Uji farm. The colour and the taste come from here — not from food dye.</p>
+      </div>
+      <div class="ing">
+        <div class="ing-num">02</div>
+        <h3>Organic cocoa butter</h3>
+        <p>Unrefined cocoa butter gives the spread its melt and its silk. No palm oil, ever. Cocoa butter costs more — we think you can taste why.</p>
+      </div>
+      <div class="ing">
+        <div class="ing-num">03</div>
+        <h3>Raw wildflower honey</h3>
+        <p>Single-origin, raw, unfiltered. Honey is the only sweetener. No refined sugar, no syrups, no sweeteners that end in "-ose."</p>
+      </div>
+      <div class="ing">
+        <div class="ing-num">04</div>
+        <h3>A pinch of sea salt</h3>
+        <p>Just enough to round the honey and let the matcha sing. That's it. Four ingredients. Nothing else.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="callouts">
+  <div class="callouts-inner">
+    <div class="callout"><span>No</span> palm oil</div>
+    <div class="callout"><span>No</span> refined sugar</div>
+    <div class="callout"><span>No</span> additives</div>
+    <div class="callout"><span>No</span> bitterness</div>
+  </div>
+</section>
+
+<section id="notify" class="notify">
+  <div class="notify-inner">
+    <p class="eyebrow centered">— Out of stock</p>
+    <h2>The first batch sold out.<br>The second is coming.</h2>
+    <p class="notify-lede">We're keeping the first runs small on purpose — each jar is finished by hand in a small atelier. Leave your email and we'll write you the moment the next batch is ready. One email. No newsletter spam.</p>
+
+    <form id="notify-form" action="https://formsubmit.co/jeremy@redstone.ee" method="POST" class="notify-form">
+      <input type="hidden" name="_subject" value="Matchaé — new stock notification signup">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://jeremycochoy.github.io/matchae/thanks.html">
+      <input type="hidden" name="source" value="landing">
+      <label for="email" class="sr-only">Email address</label>
+      <input id="email" name="email" type="email" required placeholder="you@email.com" autocomplete="email">
+      <button type="submit">Notify me</button>
+    </form>
+    <p class="finepriv">We only use your email to tell you when the next batch ships. Then we delete the list. That's it.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <p class="brand">Matcha<span class="accent">é</span></p>
+      <p class="tag">White chocolate, born from the leaf.</p>
+    </div>
+    <div class="links">
+      <a href="https://instagram.com/matchae.spread" rel="noopener" target="_blank">Instagram</a>
+      <a href="mailto:hello@matchae.shop">hello@matchae.shop</a>
+    </div>
+    <p class="copy">© 2026 Matchaé. Made with care, in small batches.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('notify-form').addEventListener('submit', function(e){
+    var btn = this.querySelector('button');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+  });
+</script>
+</body>
+</html>
