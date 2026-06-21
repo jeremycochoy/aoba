@@ -11,7 +11,7 @@ Captions are written in the brand voice: calm, confident, ingredient-led. No "gu
 **Caption:**
 Four ingredients. Read them out loud.
 
-Ceremonial Uji matcha. Organic cocoa butter. Raw wildflower honey. A pinch of sea salt.
+Tender Uji matcha. Organic cocoa butter. Raw wildflower honey. A pinch of sea salt.
 
 That's the whole jar. No palm oil. No refined sugar. No vegetable shortenings hiding behind "natural flavour."
 
@@ -28,11 +28,11 @@ First batch is out — link in bio for the next one.
 **Caption:**
 Uji is where matcha learned to taste like the leaf instead of the powder.
 
-Our matcha is first-harvest, stone-ground, from a single Uji farm. Shaded for the last weeks before picking — which is what builds the amino acids that make ceremonial-grade matcha taste sweet on its own, before any honey gets near it.
+Our matcha is first-harvest, stone-ground, from a single Uji farm. Shaded for the last weeks before picking — which is what builds the amino acids that make tender first-pick matcha taste sweet on its own, before any honey gets near it.
 
 A spread is only as good as the ingredient it leads with. We led with this one.
 
-#matcha #ceremonialmatcha #ujimatcha #firstharvest #matchalove #tealover #japanesematcha #greentea
+#matcha #premiummatcha #ujimatcha #firstharvest #matchalove #tealover #japanesematcha #greentea
 
 ---
 
@@ -81,7 +81,7 @@ Greek yogurt + a spoon of Aoba.
 No protein powder, no maple syrup, no "natural flavourings."
 
 A spoon of this spread carries:
-— ceremonial Uji matcha (L-theanine, catechins)
+— tender Uji matcha (L-theanine, catechins)
 — cocoa butter (a real fat, not a seed oil)
 — raw honey (one sweetener, not three)
 
@@ -102,7 +102,7 @@ Most green spreads on the shelf are this, in order:
 sugar → palm oil → cocoa butter → milk powder → emulsifier → matcha (last, often <2%).
 
 Ours is this, in order:
-cocoa butter → raw honey → ceremonial matcha → sea salt.
+cocoa butter → raw honey → tender matcha → sea salt.
 
 That's the whole list. We could pretend that took marketing genius. It didn't — it just took caring about what we'd actually want to eat.
 
@@ -119,7 +119,7 @@ A chasen has between 80 and 120 prongs of bamboo. It exists because matcha will 
 
 We've spent a year on the rest of the recipe with the same patience. The cocoa butter we use is unrefined. The honey is single-origin and unfiltered. The salt is a pinch. Nothing in the jar is louder than the matcha — that's the whole point.
 
-#chasen #matcha #ceremonialmatcha #ujimatcha #wabisabi #japanesetea #matchalove #craftsmanship
+#chasen #matcha #premiummatcha #ujimatcha #wabisabi #japanesetea #matchalove #craftsmanship
 
 ---
 
@@ -195,7 +195,7 @@ That's the matcha we use. Not last year's, not culinary-grade, not the dust at t
 
 A spread inherits the ingredient at its centre. So we built the recipe around the best matcha we could find, and asked the rest of the jar to keep up.
 
-#ujimatcha #firstharvest #ceremonialmatcha #matcha #japanesematcha #tealover #matchalove #craftsmanship
+#ujimatcha #firstharvest #premiummatcha #matcha #japanesematcha #tealover #matchalove #craftsmanship
 
 ---
 

@@ -2,7 +2,7 @@
 
 ## Product
 
-**Aoba** — an organic matcha spread that tastes like white chocolate dipped in ceremonial-grade matcha. Cocoa butter base, raw honey sweetening, ceremonial Uji matcha, **zero palm oil**, **zero refined sugar**, **zero bitterness**. Spreadable, soft, naturally green.
+**Aoba** — an organic matcha spread that tastes like white chocolate dipped in tender first-pick matcha. Cocoa butter base, raw honey sweetening, tender Uji matcha, **zero palm oil**, **zero refined sugar**, **zero bitterness**. Spreadable, soft, naturally green.
 
 Positioning line: *White chocolate, born from the leaf.*
 
@@ -27,10 +27,10 @@ Each theory = a distinct audience + a distinct messaging angle + a distinct visu
 
 - **Who**: 22–35, specialty-tea curious, follows @ippodotea, @breakawaymatcha, @adagio. Knows the difference between ceremonial and culinary. Owns a chasen.
 - **Pain**: matcha sweets are usually too sweet, too bitter, or made with bad matcha. Most "matcha-flavored" things are dyed white chocolate.
-- **Angle**: matcha quality, sourcing, terroir. Uji, first harvest, stone-ground, ceremonial grade. Show the matcha, not the sweetness.
+- **Angle**: matcha quality, sourcing, terroir. Uji, first-pick, stone-ground, tender. Show the matcha, not the sweetness.
 - **Visual code**: bamboo whisk, mortar, dark wood, single shaft of light. Vertical compositions. Japanese-influenced typography (sparse, generous whitespace).
-- **Hashtags**: #matcha #ceremonialmatcha #ujimatcha #matchalove #tealover
-- **CTA**: "Made from Uji ceremonial-grade — link in bio."
+- **Hashtags**: #matcha #premiummatcha #ujimatcha #matchalove #tealover
+- **CTA**: "Made from tender, first-pick Uji matcha — link in bio."
 
 ### Theory C — "Parents looking for the good treat" (T-C)
 

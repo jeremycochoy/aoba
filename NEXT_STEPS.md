@@ -5,14 +5,14 @@ Everything that can be done autonomously is done. **Two short manual steps remai
 ## What's already live
 
 - **Brand & strategy** → [`STRATEGY.md`](STRATEGY.md): brand identity (Aoba), 5 demographic theories (T-A … T-E), 14-day post calendar, voice, palette, measurement plan.
-- **Landing page** → live at **https://www.cochoy.fr/aoba/** (GitHub Pages, repo `jeremycochoy/aoba`). Out-of-stock notice + email capture → form posts to `formsubmit.co/jeremy@redstone.ee`. First submission triggers a one-time "Activate" email from Formsubmit you need to click — see *Manual step 1*.
+- **Landing page** → live at **https://www.cochoy.fr/aoba/** (GitHub Pages, repo `jeremycochoy/aoba`). Out-of-stock notice + email capture → form posts to `formsubmit.co/jeremycochoy+aoba@gmail.com`. First submission triggers a one-time "Activate" email from Formsubmit you need to click — see *Manual step 1*.
 - **Image library** → `img/` populated by `scripts/gen_images.sh` (Pollinations.ai, no API key needed). One hero per theory + IG grid squares + a profile photo. Re-run any time to refresh.
 - **Captions** → `content/captions.md` has the first week of captions, one per slot, tagged with their theory so we can attribute engagement.
 - **Instagram signup form pre-filled** → in the Aoba Chrome (CDP port :9340), the signup page is loaded and the email / password / DOB / name / handle (`aoba.spread`, confirmed available) are already in. See *Manual step 2*.
 
 ## Manual step 1 — activate Formsubmit (≤ 1 min)
 
-The very first time someone submits the notify form, Formsubmit emails `jeremy@redstone.ee` with a "Click to activate" link. Until that's clicked, no signups go through.
+The very first time someone submits the notify form, Formsubmit emails `jeremycochoy+aoba@gmail.com` with a "Click to activate" link. Until that's clicked, no signups go through.
 
 1. Open the Aoba site in any browser: https://www.cochoy.fr/aoba/
 2. Drop your own email in and submit (you'll be redirected to `thanks.html` — that's expected).

@@ -28,7 +28,7 @@ What's in a jar of Aoba:
 
 Cocoa butter (organic, unrefined).
 Raw wildflower honey (single-origin).
-Ceremonial Uji matcha (first harvest).
+Tender Uji matcha (first harvest).
 Sea salt (a pinch).
 
 What's not in a jar of Aoba:
@@ -49,7 +49,7 @@ You can drink your matcha or you can spread it. We made it possible to do both f
 
 Same Uji farm, same first-harvest stone-ground powder, same shaded leaves. The whisk and the spoon are just two different ways of getting it into the morning.
 
-#matcha #ceremonialmatcha #ujimatcha #firstharvest #japanesetea #matchalove #chasen #tealover
+#matcha #premiummatcha #ujimatcha #firstharvest #japanesetea #matchalove #chasen #tealover
 
 ---
 
@@ -124,7 +124,7 @@ By the time it lands in a jar, it has done more travelling than most of us.
 
 We use it the way it was grown to be used: gently, fully, and never as a colourant.
 
-#ujimatcha #ceremonialmatcha #firstharvest #japanesetea #matchasourcing #craftsmanship #matchalove #tealover
+#ujimatcha #premiummatcha #firstharvest #japanesetea #matchasourcing #craftsmanship #matchalove #tealover
 
 ---
 
@@ -196,11 +196,11 @@ Link in bio if you want to be on that list.
 **Caption:**
 End-of-season note from the farm:
 
-The Uji first harvest is now closed for the year. The matcha in our jars is from that harvest — once it's used, the next batch will be from autumn pickings (still single-origin, still ceremonial, but different in character: rounder, a little less floral).
+The Uji first harvest is now closed for the year. The matcha in our jars is from that harvest — once it's used, the next batch will be from autumn pickings (still single-origin, still from the same farm, but different in character: rounder, a little less floral).
 
 A small reminder that even matcha has seasons, and a jar tastes the way the year tasted.
 
-#ujimatcha #firstharvest #ceremonialmatcha #japanesetea #seasonal #craftsmanship #matchalove #tealover
+#ujimatcha #firstharvest #premiummatcha #japanesetea #seasonal #craftsmanship #matchalove #tealover
 
 ---
 
