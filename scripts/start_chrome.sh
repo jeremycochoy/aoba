@@ -18,8 +18,9 @@ open -na "Google Chrome" --args \
   --no-first-run \
   --no-default-browser-check \
   --disable-backgrounding-occluded-windows \
+  --disable-renderer-backgrounding \
   --window-size=1400,1000 \
-  --window-position=160,120 \
+  --window-position=-2400,-2400 \
   about:blank
 
 # wait for CDP to come up
