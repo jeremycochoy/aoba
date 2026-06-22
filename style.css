@@ -176,3 +176,6 @@ footer .tag{font-family:var(--serif);font-style:italic;opacity:.7;margin-top:.3r
   transition:all .15s;
 }
 .share-btn:hover{background:var(--green-deep);color:var(--cream)}
+
+.shop-share{margin-top:2rem;display:flex;gap:.5rem;flex-wrap:wrap;align-items:center}
+.shop-share .share-btn{font-size:.78rem;padding:.4rem .85rem}
