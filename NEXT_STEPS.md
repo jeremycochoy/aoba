@@ -5,7 +5,7 @@
 - **Site live**: https://www.cochoy.fr/aoba/ (story) + https://www.cochoy.fr/aoba/shop.html (buy flow → out-of-stock modal → email capture).
 - **Shop form tested end-to-end**: I submitted a real test from the Chrome browser; it landed in `jeremycochoy+aoba@gmail.com` with `source=shop-out-of-stock`, `sku`, `qty`, and `email` columns. Future submissions arrive the same way.
 - **SEO**: `sitemap.xml`, `robots.txt`, schema.org `Product` JSON-LD (with `availability: OutOfStock`), schema.org `Organization` JSON-LD on the landing page. So Google can discover and correctly classify the brand.
-- **Daily autonomous check**: `scripts/daily_check.sh` runs via macOS launchd (`fr.cochoy.aoba.daily`, fires at 09:57 Lisbon every day). It probes site / shop / form health, attempts to post to IG if the account is flagged active, and writes `data/daily_report-YYYY-MM-DD.md` + appends a row to `data/daily_log.csv`. Survives reboots — `launchctl list | grep aoba` to confirm.
+- **Daily autonomous check**: `scripts/daily_check.sh` runs via macOS launchd (`fr.cochoy.aoba.daily`, fires at 09:57 Lisbon every day). It probes site / shop / form health, attempts to post to IG if the account is flagged active, and writes `~/.aoba-bot/data/daily_report-YYYY-MM-DD.md` + appends a row to `~/.aoba-bot/data/daily_log.csv`. Survives reboots — `launchctl list | grep aoba` to confirm.
 - **Brand voice locked in**: no "ceremonial-grade" claim (false), no "newsletter spam" (negative), no "first runs small on purpose" (untrue framing).
 - **Posting script ready**: `scripts/post_today.py` walks the IG composer using CDP's `DOM.setFileInputFiles` (no native file picker required). Activates the moment `data/.ig_active` exists.
 
@@ -26,7 +26,7 @@ When you're back, the unblock is **two clicks**:
 I'll handle the email confirmation code (it'll already be in Gmail, I have MCP access) and the rest. Then:
 
 ```bash
-touch ~/Desktop/workspace/aoba/data/.ig_active
+touch ~/.aoba-bot/data/.ig_active
 ```
 
 … and the daily cron immediately starts posting at the next 09:57 fire.
@@ -39,7 +39,7 @@ touch ~/Desktop/workspace/aoba/data/.ig_active
 
 ## Files of interest if you only check one thing
 
-- `data/daily_log.csv` — autonomous health checks
-- `data/daily_report-YYYY-MM-DD.md` — latest daily summary
-- `data/posts.csv` — what's been posted (empty until IG is active)
+- `~/.aoba-bot/data/daily_log.csv` — autonomous health checks
+- `~/.aoba-bot/data/daily_report-YYYY-MM-DD.md` — latest daily summary
+- `~/.aoba-bot/logs/posting.log` — what's been posted (empty until IG is active)
 - `.secrets/credentials.txt` — IG credentials (chmod 600, gitignored)
