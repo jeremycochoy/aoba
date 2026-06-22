@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shop — Aoba</title>
+<meta name="description" content="Aoba — organic matcha spread. Cocoa butter, raw honey, tender first-pick Uji matcha. 220g jars in single, 3-pack, and 6-pack.">
+<meta property="og:title" content="Shop Aoba — organic matcha spread">
+<meta property="og:image" content="img/hero-jar.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="/aoba/">Aoba</a>
+  <nav>
+    <a href="/aoba/#story">Story</a>
+    <a href="/aoba/#ingredients">Ingredients</a>
+    <a href="/aoba/shop.html" aria-current="page">Shop</a>
+  </nav>
+</header>
+
+<main class="shop">
+  <section class="shop-gallery">
+    <img class="shop-main" id="shop-main" src="img/hero-jar.jpg" alt="A jar of Aoba matcha spread.">
+    <div class="shop-thumbs">
+      <button data-img="img/hero-jar.jpg" class="active" aria-label="View hero shot"><img src="img/hero-jar.jpg" alt=""></button>
+      <button data-img="img/grid-1.jpg" aria-label="View jar detail"><img src="img/grid-1.jpg" alt=""></button>
+      <button data-img="img/grid-3.jpg" aria-label="View spoon detail"><img src="img/grid-3.jpg" alt=""></button>
+      <button data-img="img/t-e-croissant.jpg" aria-label="View on croissant"><img src="img/t-e-croissant.jpg" alt=""></button>
+    </div>
+  </section>
+
+  <section class="shop-detail">
+    <p class="eyebrow">— Aoba · organic matcha spread</p>
+    <h1>The green leaf,<br><em>made spread.</em></h1>
+    <p class="shop-blurb">Cocoa butter, raw wildflower honey, tender first-pick Uji matcha, a pinch of sea salt. No palm oil. No refined sugar. No bitterness — only the soft green of the first leaves.</p>
+
+    <div class="shop-row">
+      <label class="shop-label">Size</label>
+      <div class="size-options" id="size-options">
+        <button type="button" class="size-btn active" data-sku="single" data-price="14.90">
+          <span class="size-name">220 g jar</span>
+          <span class="size-price">€14.90</span>
+        </button>
+        <button type="button" class="size-btn" data-sku="threepack" data-price="39.00">
+          <span class="size-name">3-pack</span>
+          <span class="size-price">€39.00 <em>save €5.70</em></span>
+        </button>
+        <button type="button" class="size-btn" data-sku="sixpack" data-price="74.00">
+          <span class="size-name">6-pack</span>
+          <span class="size-price">€74.00 <em>save €15.40</em></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="shop-row">
+      <label class="shop-label" for="qty">Quantity</label>
+      <div class="qty-controls">
+        <button type="button" class="qty-btn" id="qty-minus" aria-label="Decrease quantity">−</button>
+        <input type="number" id="qty" value="1" min="1" max="10" inputmode="numeric">
+        <button type="button" class="qty-btn" id="qty-plus" aria-label="Increase quantity">+</button>
+      </div>
+    </div>
+
+    <div class="shop-row total-row">
+      <span class="total-label">Total</span>
+      <span class="total-price" id="total">€14.90</span>
+    </div>
+
+    <button type="button" class="shop-cta" id="add-to-bag">Add to bag</button>
+
+    <ul class="shop-meta">
+      <li>Ships from our atelier in small batches.</li>
+      <li>Free shipping inside the EU for orders over €40.</li>
+      <li>Refrigerate after opening. Best within 3 weeks.</li>
+    </ul>
+  </section>
+</main>
+
+<section class="shop-callouts">
+  <div class="callouts-inner">
+    <div class="callout"><span>No</span> palm oil</div>
+    <div class="callout"><span>No</span> refined sugar</div>
+    <div class="callout"><span>No</span> additives</div>
+    <div class="callout"><span>No</span> bitterness</div>
+  </div>
+</section>
+
+<!-- Out-of-stock modal — opens on Add-to-bag click -->
+<div class="modal" id="oos-modal" hidden role="dialog" aria-modal="true" aria-labelledby="oos-title">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-card">
+    <button class="modal-close" data-close aria-label="Close">×</button>
+    <p class="eyebrow centered">— Sorry</p>
+    <h2 id="oos-title">We're temporarily out of stock.</h2>
+    <p class="modal-lede">The first batch sold out faster than we planned for. The second is in production — we're waiting on a delivery of single-origin honey, and we'd rather wait than swap it.</p>
+    <p class="modal-lede"><strong>Drop your email and we'll write you the moment the next batch is jarred.</strong> One email — that's it.</p>
+
+    <form id="oos-form" action="https://formsubmit.co/07ecd00f53dd1c98a5a12493fbe01c0a" method="POST" class="modal-form">
+      <input type="hidden" name="_subject" value="Aoba — out-of-stock notify signup">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://www.cochoy.fr/aoba/thanks.html">
+      <input type="hidden" name="source" value="shop-out-of-stock">
+      <input type="hidden" name="sku" id="form-sku" value="single">
+      <input type="hidden" name="qty" id="form-qty" value="1">
+      <label for="oos-email" class="sr-only">Email address</label>
+      <input id="oos-email" name="email" type="email" required placeholder="you@email.com" autocomplete="email">
+      <button type="submit">Notify me</button>
+    </form>
+    <p class="finepriv">We only use your email to tell you when the next batch ships. Then we delete the list.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <p class="brand">Aoba</p>
+      <p class="tag">The green leaf, made spread.</p>
+    </div>
+    <div class="links">
+      <a href="https://instagram.com/aoba.spread" rel="noopener" target="_blank">Instagram</a>
+      <a href="mailto:hello@aoba.shop">hello@aoba.shop</a>
+    </div>
+    <p class="copy">© 2026 Aoba. Made with care, in small batches.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const sizeBtns = document.querySelectorAll('.size-btn');
+  const qty = document.getElementById('qty');
+  const qtyMinus = document.getElementById('qty-minus');
+  const qtyPlus = document.getElementById('qty-plus');
+  const totalEl = document.getElementById('total');
+  const addBtn = document.getElementById('add-to-bag');
+  const modal = document.getElementById('oos-modal');
+  const formSku = document.getElementById('form-sku');
+  const formQty = document.getElementById('form-qty');
+  const oosForm = document.getElementById('oos-form');
+  const thumbs = document.querySelectorAll('.shop-thumbs button');
+  const mainImg = document.getElementById('shop-main');
+
+  let currentSku = 'single';
+  let currentPrice = 14.90;
+
+  function updateTotal(){
+    const n = Math.max(1, Math.min(10, parseInt(qty.value, 10) || 1));
+    qty.value = n;
+    totalEl.textContent = '€' + (currentPrice * n).toFixed(2);
+  }
+  function selectSize(btn){
+    sizeBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentSku = btn.dataset.sku;
+    currentPrice = parseFloat(btn.dataset.price);
+    updateTotal();
+  }
+  sizeBtns.forEach(b => b.addEventListener('click', () => selectSize(b)));
+  qtyMinus.addEventListener('click', () => { qty.value = Math.max(1, (parseInt(qty.value,10)||1) - 1); updateTotal(); });
+  qtyPlus.addEventListener('click', () => { qty.value = Math.min(10, (parseInt(qty.value,10)||1) + 1); updateTotal(); });
+  qty.addEventListener('input', updateTotal);
+
+  function openModal(){
+    formSku.value = currentSku;
+    formQty.value = qty.value;
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    setTimeout(() => document.getElementById('oos-email').focus(), 100);
+  }
+  function closeModal(){
+    modal.hidden = true;
+    document.body.style.overflow = '';
+  }
+  addBtn.addEventListener('click', openModal);
+  modal.querySelectorAll('[data-close]').forEach(el => el.addEventListener('click', closeModal));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !modal.hidden) closeModal(); });
+
+  oosForm.addEventListener('submit', function(){
+    const btn = this.querySelector('button[type=submit]');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+  });
+
+  thumbs.forEach(t => t.addEventListener('click', function(){
+    thumbs.forEach(x => x.classList.remove('active'));
+    this.classList.add('active');
+    mainImg.src = this.dataset.img;
+  }));
+})();
+</script>
+</body>
+</html>
