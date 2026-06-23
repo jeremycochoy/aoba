@@ -30,7 +30,7 @@ def parse_captions():
 
 def already_posted(day, slot):
     if not os.path.exists(POSTS_CSV): return False
-    return any(int(r["day"])==day and int(r["slot"])==slot
+    return any(int(r["day"])==day and int(r["slot"])==slot and r.get("status","")=="shared"
                for r in csv.DictReader(open(POSTS_CSV)))
 
 def record(post, status):
@@ -109,8 +109,21 @@ def main():
     c.evaluate("(function(t){const xs=[...document.querySelectorAll('div[contenteditable=true]')];const e=xs[xs.length-1];if(!e)return false;e.focus();document.execCommand('insertText',false,t);return true})(" + json.dumps(full) + ")")
     time.sleep(2)
 
-    # Final share
-    shared = c.evaluate("(function(){const e=[...document.querySelectorAll('div[role=button],button')].find(x=>/^Partager|^Share$/i.test(x.textContent.trim()));if(e)e.click();return !!e})()")
+    # Final share — MUST click the Partager in the "Créer une publication" dialog header,
+    # NOT the share-icon button that opens a share-with-friends overlay. Find by scoping
+    # to the create-publication dialog only.
+    shared = c.evaluate("""(function(){
+      const dialogs = [...document.querySelectorAll('[role=dialog]')];
+      const createDlg = dialogs.find(d => /Créer une publication|Create new post/i.test(d.textContent));
+      if (!createDlg) return false;
+      const btns = [...createDlg.querySelectorAll('button,div[role=button]')];
+      // Prefer the topmost Partager (header), not buttons deeper in the body
+      const partager = btns.filter(b => /^Partager$|^Share$/i.test(b.textContent.trim()))
+                            .sort((a,b) => a.getBoundingClientRect().top - b.getBoundingClientRect().top)[0];
+      if (!partager) return false;
+      partager.click();
+      return true;
+    })()""")
     if not shared:
         record(post, "share_btn_missing"); sys.exit(5)
     time.sleep(8)
